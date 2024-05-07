@@ -1,0 +1,468 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #000;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+  
+
+/* Estilos generales */
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos del menú */
+.menu {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+.menu__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu__list__item a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Estilos del título */
+.title {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.title__bio {
+  font-size: 2rem;
+}
+
+.title__profile {
+  width: 150px;
+  border-radius: 50%;
+}
+
+/* Estilos de las secciones */
+.section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Estilos de las habilidades */
+.skills__line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skills__box {
+  width: 150px;
+  margin: 20px 0;
+}
+
+.skills__img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Estilos de los hobbies */
+.hobbies__line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.hobbies__box {
+  width: 150px;
+  margin: 20px 0;
+}
+
+.hobbies__img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Estilos de la sección de formación académica */
+.academic {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.academic__courses {
+  display: flex;
+  flex-direction:row;
+  gap: 600px;
+
+}
+
+/* Estilos de la sección de experiencia profesional */
+
+
+
+.experiencie__box{
+  display: flex;
+  flex-direction:row;
+  gap: 600px;
+
+}
+
+.experience__box{
+height: inherit;
+margin: var(--centrar-con-margin);
+max-width: var(--tamaño-containerMaxWidth);
+width: 100%;
+}
+
+.experience__box {
+  margin-bottom: 30px;
+}
+
+.experience__img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+/* Estilos del formulario de contacto */
+.formcontato__form {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.formcontato__input,
+.formcontato__textarea,
+.formcontato__botao {
+  margin: 10px 0;
+  padding: 8px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.formcontato__botao {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilos del footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+/* Media queries para dispositivos con ancho mínimo de 768px */
+@media (min-width: 768px) {
+  /* Estilos del menú */
+  .menu {
+    padding: 20px;
+  }
+  .menu__list {
+    width: auto;
+    overflow: scroll;
+
+  }
+
+  /* Estilos del título */
+  .title {
+    padding: 100px 0;
+  }
+
+  .title__bio {
+    font-size: 2.5rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  }
+
+  /* Estilos de las habilidades */
+  .skills__line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .skills__box {
+    width: calc(33.33% - 20px); /* Calcula el ancho para mostrar tres elementos por fila con margen entre ellos */
+    margin: 20px 0;
+  }
+
+  /* Estilos de los hobbies */
+  .hobbies__line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .hobbies__box {
+    width: calc(33.33% - 20px); /* Calcula el ancho para mostrar tres elementos por fila con margen entre ellos */
+    margin: 20px 0;
+  }
+
+  /* Estilos de la sección de formación académica */
+  .academic__courses__box {
+    margin-bottom: 30px;
+  }
+
+  /* Estilos de la sección de experiencia profesional */
+  .experience__box {
+    margin-bottom: 40px;
+  }
+}
+
+/* Media queries para dispositivos con ancho mínimo de 425px */
+@media (min-width: 425px) {
+  /* Estilos del menú */
+  .menu {
+    padding: 10px;
+  }
+
+  /* Estilos del título */
+  .title {
+    padding: 80px 0;
+  }
+
+  .title__bio {
+    font-size: 2rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  }
+
+  /* Estilos de las habilidades */
+  .skills__line {
+    justify-content: space-around;
+  }
+
+  .skills__box {
+    width: 45%;
+    margin: 10px;
+  }
+
+  /* Estilos de los hobbies */
+  .hobbies__line {
+    justify-content: space-around;
+  }
+
+  .hobbies__box {
+    width: 45%;
+    margin: 10px;
+  }
+
+  /* Estilos de la sección de formación académica */
+  .academic__courses__box {
+    margin-bottom:0%;
+    flex-direction:row;
+
+  }
+
+  /* Estilos de la sección de experiencia profesional */
+  .experience__box {
+    margin-bottom:0%;
+    flex-direction:row;
+
+  }
+}
+
+
+
+/*Mobile*/
+/* Media queries para dispositivos con ancho mínimo de 425px */
+/* Media queries para dispositivos con ancho mínimo de 425px */
+@media (min-width: 430px) {
+  /* Estilos del menú */
+  .menu {
+    padding: 20px;
+  }
+
+  .menu__list {
+    display: flex;
+    justify-content: space-around;
+    white-space: nowrap;
+    overflow:    scroll;
+    gap: 15px;
+
+  }
+
+  /* Estilos del título */
+  .title {
+    padding: 100px 0;
+  }
+
+  .title__bio {
+    font-size: 2.5rem;
+  }
+
+  /* Estilos de la sección sobre mi */
+  .about__container {
+    padding: 50px 20px;
+  }
+
+  /* Estilos de las habilidades */
+  .skills__line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .skills__box {
+    width: calc(50% - 20px); /* Calcula el ancho para mostrar dos elementos por fila con margen entre ellos */
+    margin: 20px 0;
+  }
+
+  /* Estilos de los hobbies */
+  .hobbies__line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .hobbies__box {
+    width: calc(50% - 20px); /* Calcula el ancho para mostrar dos elementos por fila con margen entre ellos */
+    margin: 20px 0;
+  }
+
+  /* Estilos de la sección de formación académica */
+  .academic__courses__box {
+    margin-bottom: 30px;
+  }
+
+  /* Estilos de la sección de experiencia profesional */
+  .experience__box {
+    margin-bottom: 40px;
+  }
+
+  /* Estilos del formulario de contacto */
+  .formcontato__text {
+    padding: 50px 20px;
+  }
+
+  .formcontato__input,
+  .formcontato__textarea,
+  .formcontato__botao {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+  }
+
+  /* Estilos del footer */
+  .footer {
+    padding: 20px;
+  }
+}
+
+
+@media (min-width: 300px) {
+  /* Estilos del menú */
+  .menu {
+    padding: 20px;
+  }
+
+  .menu__list {
+    display: flex;
+    justify-content: space-around;
+    white-space:initial;
+    overflow:    scroll;
+    gap: 15px;
+
+  }
+
+  /* Estilos del título */
+  .title {
+    padding: 100px 0;
+  }
+
+  .title__bio {
+    font-size: 2.5rem;
+  }
+
+  /* Estilos de la sección sobre mi */
+  .about__container {
+    padding: 50px 20px;
+  }
+
+  /* Estilos de las habilidades */
+  .skills__line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .skills__box {
+    width: calc(50% - 20px); /* Calcula el ancho para mostrar dos elementos por fila con margen entre ellos */
+    margin: 20px 0;
+  }
+
+  /* Estilos de los hobbies */
+  .hobbies__line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .hobbies__box {
+    width: calc(50% - 20px); /* Calcula el ancho para mostrar dos elementos por fila con margen entre ellos */
+    margin: 20px 0;
+  }
+
+  /* Estilos de la sección de formación académica */
+  .academic__courses__box {
+    margin-bottom: 30px;
+  }
+
+  /* Estilos de la sección de experiencia profesional */
+  .experience__box {
+    margin-bottom: 40px;
+  }
+
+  /* Estilos del formulario de contacto */
+  .formcontato__text {
+    padding: 50px 20px;
+  }
+
+  .formcontato__input,
+  .formcontato__textarea,
+  .formcontato__botao {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+  }
+
+  /* Estilos del footer */
+  .footer {
+    padding: 20px;
+  }
+}
+
